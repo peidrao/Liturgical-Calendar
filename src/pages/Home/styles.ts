@@ -8,9 +8,9 @@ export const Title = styled.h1`
 export const Container = styled.div`
   font-size: 32px;
   display: grid;
- grid-template-columns: repeat(2, 1fr);
- column-gap: 12px;
- `;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 12px;
+`;
 
 export const Content = styled.div`
   margin-top: 80px;
@@ -24,7 +24,7 @@ export const Content = styled.div`
   text-decoration: none;
   align-items: center;
   trasition: transform 0.2s;
-  
+
   &:hover {
     transform: translateY(10px);
   }
@@ -34,9 +34,13 @@ export const Content = styled.div`
   }
 
   div {
+    flex: 1;
     p {
       padding-left: 20px;
     }
-  }
 
+    svg {
+      margin-left: auto;
+    }
+  }
 `;

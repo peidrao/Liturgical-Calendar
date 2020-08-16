@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoIosArrowForward } from 'react-icons/io';
 
 import { Container, Title, Content } from './styles';
 
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
           <div>
             <p>Janeiro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
 
         <Content>
@@ -22,6 +24,7 @@ const Home: React.FC = () => {
           <div>
             <p>Fevereiro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>3</p>
@@ -29,6 +32,7 @@ const Home: React.FC = () => {
           <div>
             <p>Março</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>4</p>
@@ -36,6 +40,7 @@ const Home: React.FC = () => {
           <div>
             <p>Abril</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
 
         <Content>
@@ -44,6 +49,7 @@ const Home: React.FC = () => {
           <div>
             <p>Maio</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>6</p>
@@ -51,6 +57,7 @@ const Home: React.FC = () => {
           <div>
             <p>Junho</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
 
         <Content>
@@ -59,6 +66,7 @@ const Home: React.FC = () => {
           <div>
             <p>Julho</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>8</p>
@@ -66,6 +74,7 @@ const Home: React.FC = () => {
           <div>
             <p>Agosto</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
 
         <Content>
@@ -74,6 +83,7 @@ const Home: React.FC = () => {
           <div>
             <p>Setembro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>10</p>
@@ -81,6 +91,7 @@ const Home: React.FC = () => {
           <div>
             <p>Outubro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
 
         <Content>
@@ -89,6 +100,7 @@ const Home: React.FC = () => {
           <div>
             <p>Novembro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
         <Content>
           <p>12</p>
@@ -96,6 +108,7 @@ const Home: React.FC = () => {
           <div>
             <p>Dezembro</p>
           </div>
+          <IoIosArrowForward size={30} />
         </Content>
       </Container>
     </>
