@@ -7,8 +7,8 @@ import Month from '../pages/Month';
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route exact component={Home} to="/" />
-      <Route component={Month} to="/month" />
+      <Route exact component={Home} path="/" />
+      <Route component={Month} path="/month" />
     </Switch>
   );
 };
