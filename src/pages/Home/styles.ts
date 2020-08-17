@@ -12,6 +12,7 @@ export const Container = styled.div`
   column-gap: 12px;
 `;
 
+
 export const Content = styled.div`
   margin-top: 80px;
   max-width: 700px;
@@ -21,9 +22,12 @@ export const Content = styled.div`
   width: 100%;
   padding: 24px;
   display: flex;
-  text-decoration: none;
   align-items: center;
   trasition: transform 0.2s;
+
+  a {
+    text-decoration: none;
+  }
 
   &:hover {
     transform: translateY(10px);
@@ -44,3 +48,6 @@ export const Content = styled.div`
     }
   }
 `;
+
+
+

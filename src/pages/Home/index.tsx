@@ -1,21 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 
 import { Container, Title, Content } from './styles';
 
-interface TableMonth {
-  date: string;
-}
-
 const Home: React.FC = () => {
-
   return (
     <>
       <Title> Ano 2020 </Title>
 
       <Container>
-        <Link to="month/1">
+        <Link style={{ textDecoration: 'none' }} to="month/1">
           <Content>
             <p>1</p>
 
@@ -26,7 +21,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/2">
+        <Link style={{ textDecoration: 'none' }} to="month/2">
           <Content>
             <p>2</p>
             <div>
@@ -36,7 +31,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/3">
+        <Link style={{ textDecoration: 'none' }} to="month/3">
           <Content>
             <p>3</p>
             <div>
@@ -46,7 +41,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/4">
+        <Link style={{ textDecoration: 'none' }} to="month/4">
           <Content>
             <p>4</p>
             <div>
@@ -56,7 +51,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/5">
+        <Link style={{ textDecoration: 'none' }} to="month/5">
           <Content>
             <p>5</p>
             <div>
@@ -66,7 +61,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/6">
+        <Link style={{ textDecoration: 'none' }} to="month/6">
           <Content>
             <p>6</p>
             <div>
@@ -76,7 +71,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/7">
+        <Link style={{ textDecoration: 'none' }} to="month/7">
           <Content>
             <p>7</p>
             <div>
@@ -86,7 +81,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/8">
+        <Link style={{ textDecoration: 'none' }} to="month/8">
           <Content>
             <p>8</p>
             <div>
@@ -96,7 +91,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/9">
+        <Link style={{ textDecoration: 'none' }} to="month/9">
           <Content>
             <p>9</p>
             <div>
@@ -106,7 +101,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/10">
+        <Link style={{ textDecoration: 'none' }} to="month/10">
           <Content>
             <p>10</p>
             <div>
@@ -116,7 +111,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/11">
+        <Link style={{ textDecoration: 'none' }} to="month/11">
           <Content>
             <p>11</p>
             <div>
@@ -126,7 +121,7 @@ const Home: React.FC = () => {
           </Content>
         </Link>
 
-        <Link to="month/12">
+        <Link style={{ textDecoration: 'none' }} to="month/12">
           <Content>
             <p>12</p>
             <div>
