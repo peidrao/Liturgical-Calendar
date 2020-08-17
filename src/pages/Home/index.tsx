@@ -4,6 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { Container, Title, Content } from './styles';
 
 const Home: React.FC = () => {
+
   return (
     <>
       <Title> Ano 2020 </Title>

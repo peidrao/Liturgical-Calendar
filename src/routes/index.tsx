@@ -8,7 +8,7 @@ const Routes: React.FC = () => {
   return (
     <Switch>
       <Route exact component={Home} path="/" />
-      <Route component={Month} path="/month" />
+      <Route component={Month} path="/month/:month+" />
     </Switch>
   );
 };
