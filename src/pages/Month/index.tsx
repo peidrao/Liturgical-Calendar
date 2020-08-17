@@ -4,36 +4,27 @@ import { useRouteMatch } from 'react-router-dom';
 import api from '../../services/api';
 import { Container } from './styles';
 
+interface CelebrationsProps {
+  title: string;
+  rank: string;
+  colour: string;
+}
+
 interface DayDate {
   date: string;
   weekday: string;
-  celebrations: {
-    title: string;
-    colour: string;
-    rank: string;
-  };
+  celebrations: CelebrationsProps[];
 }
-
 interface DayParams {
   month: string;
 }
 
-interface CelebrationsProps {
-  date: string;
-  celebrations: {
-    rank: string;
-  };
-}
-
 const Month: React.FC = () => {
   const [months, setMonth] = useState<DayDate[]>([]);
-  const [celebrations, setCelebration] = useState<CelebrationsProps[]>([]);
   const { params } = useRouteMatch<DayParams>();
 
   useEffect(() => {
     api.get(`/${params.month}`).then(response => {
-      console.log(setCelebration(response.data));
-      setCelebration(response.data);
       setMonth(response.data);
     });
   }, [params.month]);
@@ -46,7 +37,7 @@ const Month: React.FC = () => {
             <tr>
               <th>Date</th>
               <th>Weekday</th>
-              <th>Rank</th>
+              <th>Title / Colour / Rank</th>
             </tr>
           </thead>
           {months.map(month => (
@@ -54,16 +45,20 @@ const Month: React.FC = () => {
               <tr>
                 <td>{month.date}</td>
                 <td>{month.weekday}</td>
-                <td>{month.celebrations.rank}</td>
+                <td>
+                  <ul>
+                    {month.celebrations.map(teste => (
+                      <li key={month.date}>
+                        {teste.title} / {teste.colour} / {teste.rank}
+                      </li>
+                    ))}
+                  </ul>
+                </td>
               </tr>
             </tbody>
           ))}
         </table>
       </Container>
-
-      {celebrations.map(m => (
-        <p key={m.date}> {m.celebrations.rank}</p>
-      ))}
     </>
   );
 };
