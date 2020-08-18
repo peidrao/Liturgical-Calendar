@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward, IoMdCalendar } from 'react-icons/io';
 
 import { Container, Title, Content } from './styles';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Title> Ano 2020 </Title>
+      <Title>
+        <IoMdCalendar size={35} />
+        Ano 2020
+      </Title>
 
       <Container>
         <Link style={{ textDecoration: 'none' }} to="month/1">

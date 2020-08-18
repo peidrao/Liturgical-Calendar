@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const Title = styled.h1`
   font-size: 32px;
-  justify-content: center;
+  color: #f3f3f3;
+  max-width: 450px;
+  margin-top: 30px;
+  line-height: 56px;
 `;
 
 export const Container = styled.div`

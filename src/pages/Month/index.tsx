@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { IoMdReturnLeft } from 'react-icons/io';
+import { useRouteMatch, Link } from 'react-router-dom';
 
 import api from '../../services/api';
-import { Container } from './styles';
+import { Header, Container } from './styles';
 
 interface CelebrationsProps {
   title: string;
@@ -31,6 +32,13 @@ const Month: React.FC = () => {
 
   return (
     <>
+      <Header>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <IoMdReturnLeft size={30} />
+          Voltar
+        </Link>
+      </Header>
+
       <Container>
         <table>
           <thead>
