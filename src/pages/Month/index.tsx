@@ -3,7 +3,7 @@ import { IoMdReturnLeft } from 'react-icons/io';
 import { useRouteMatch, Link } from 'react-router-dom';
 
 import api from '../../services/api';
-import { Header, Container } from './styles';
+import { Header, Container, Circle } from './styles';
 
 interface CelebrationsProps {
   title: string;
@@ -57,7 +57,9 @@ const Month: React.FC = () => {
                   <ul>
                     {month.celebrations.map(teste => (
                       <li key={month.date}>
-                        {teste.title} / {teste.colour} / {teste.rank}
+                        {teste.title} /
+                        {teste.colour === 'green' ? 'verde' : teste.colour || teste.colour === 'red' ? <Circle /> : teste.colour} /
+                        {teste.rank}
                       </li>
                     ))}
                   </ul>
