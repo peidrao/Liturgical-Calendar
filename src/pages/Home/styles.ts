@@ -1,20 +1,32 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
+export const Header = styled.div`
   font-size: 32px;
   color: #f3f3f3;
-  max-width: 450px;
-  margin-top: 30px;
-  line-height: 56px;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-weight: 900;
+  }
+`;
+
+export const Title = styled.div`
+  color: #fff;
+  display: flex;
+  p {
+    margin-left: 10px;
+    font-weight: 100;
+  }
 `;
 
 export const Container = styled.div`
   font-size: 32px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 12px;
 `;
-
 
 export const Content = styled.div`
   margin-top: 80px;
@@ -51,6 +63,3 @@ export const Content = styled.div`
     }
   }
 `;
-
-
-

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import keysCrossed from '../images/keys-crossed.svg';
 
 export default createGlobalStyle`
 * {
@@ -9,8 +10,9 @@ export default createGlobalStyle`
    }
 
    body {
-     background-color: #ea3f2d;
+     background: #1B2432 url(${keysCrossed}) no-repeat;
      -webkit-font-smoothing: antialiased;
+
    }
   
    body, button {
