@@ -43,11 +43,7 @@ const Month: React.FC = () => {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <IoMdReturnLeft size={30} />
           Voltar
-
-
         </Link>
-
-        
       </Header>
 
       <Container>
