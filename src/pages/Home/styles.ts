@@ -27,7 +27,7 @@ export const Title = styled.span`
 export const Container = styled.div`
   font-size: 32px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 12px;
 `;
 

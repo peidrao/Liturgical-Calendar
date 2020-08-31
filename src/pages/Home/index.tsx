@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           <p>1</p>
 
           <div>
-            <p>Janeiro</p>
+            <p>JAN</p>
           </div>
           <Link style={{ textDecoration: 'inherit' }} to="month/1">
             <IoIosArrowForward size={30} />
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         <Content>
           <p>2</p>
           <div>
-            <p>Fevereiro</p>
+            <p>FEV</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/2">
             <IoIosArrowForward size={30} />
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         <Content>
           <p>3</p>
           <div>
-            <p>Março</p>
+            <p>MAR</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/3">
             <IoIosArrowForward size={30} />
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         <Content>
           <p>4</p>
           <div>
-            <p>Abril</p>
+            <p>ABR</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/4">
             <IoIosArrowForward size={30} />
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         <Content>
           <p>5</p>
           <div>
-            <p>Maio</p>
+            <p>MAI</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/5">
             <IoIosArrowForward size={30} />
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
         <Content>
           <p>6</p>
           <div>
-            <p>Junho</p>
+            <p>JUN</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/6">
             <IoIosArrowForward size={30} />
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
         <Content>
           <p>7</p>
           <div>
-            <p>Julho</p>
+            <p>JUL</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/7">
             <IoIosArrowForward size={30} />
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         <Content>
           <p>8</p>
           <div>
-            <p>Agosto</p>
+            <p>AGO</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/8">
             <IoIosArrowForward size={30} />
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
         <Content>
           <p>9</p>
           <div>
-            <p>Setembro</p>
+            <p>SET</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/9">
             <IoIosArrowForward size={30} />
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
         <Content>
           <p>10</p>
           <div>
-            <p>Outubro</p>
+            <p>OUT</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/10">
             <IoIosArrowForward size={30} />
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
         <Content>
           <p>11</p>
           <div>
-            <p>Novembro</p>
+            <p>NOV</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/11">
             <IoIosArrowForward size={30} />
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
         <Content>
           <p>12</p>
           <div>
-            <p>Dezembro</p>
+            <p>DEZ</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/12">
             <IoIosArrowForward size={30} />
