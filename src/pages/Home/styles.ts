@@ -15,8 +15,8 @@ export const Header = styled.div`
 export const Title = styled.span`
   display: flex;
   align-items: center;
-  max-width: 450px;
-  line-height: 56px;
+  max-width: 400px;
+  line-height: 10px;
 
   p {
     padding-left: 10px;
@@ -27,18 +27,18 @@ export const Title = styled.span`
 export const Container = styled.div`
   font-size: 32px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 12px;
 `;
 
 export const Content = styled.div`
   margin-top: 80px;
-  max-width: 700px;
+  max-width: 500px;
   align-content: start;
   background: #fff;
   border-radius: 5px;
-  width: 100%;
-  padding: 24px;
+  width: 80%;
+  padding: 10px;
   display: flex;
   align-items: center;
   trasition: transform 0.2s;
