@@ -41,9 +41,9 @@ const Month: React.FC = () => {
     <>
       <Header>
         <Link to="/" style={{ textDecoration: 'none' }}>
-          <IoMdReturnLeft size={30} />
-          Voltar
+          <IoMdReturnLeft size={20} />
         </Link>
+        Voltar
       </Header>
 
       <Container>
@@ -83,7 +83,7 @@ const Month: React.FC = () => {
                 <td>
                   <ul>
                     {month.celebrations.map(teste => (
-                      <li key={month.date}>
+                      <li style={{ textAlign: 'center' }} key={month.date}>
                         {teste.colour === 'red' && <CircleRed />}
                         {teste.colour === 'green' && <CircleGreen />}
                         {teste.colour === 'white' && <CircleWhite />}

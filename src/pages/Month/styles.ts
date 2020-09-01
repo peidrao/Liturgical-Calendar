@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 
-export const Header = styled.h1`
-  color: #fff;
+export const Header = styled.div`
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #f3f3f3;
+  justify-content: flex-end;
+
+  svg {
+    margin-right: 10px;
+  }
 `;
 
 export const CircleRed = styled.span`
@@ -22,7 +30,7 @@ export const CircleGreen = styled.span`
 
 export const CircleWhite = styled.span`
   display: inline-block;
-  background: white ;
+  background: white;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -35,7 +43,6 @@ export const CircleViolet = styled.span`
   width: 10px;
   height: 10px;
 `;
-
 
 export const Container = styled.div`
   table {
@@ -56,7 +63,6 @@ export const Container = styled.div`
 
   th {
     height: 50px;
-
   }
 
   td {
