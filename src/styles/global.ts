@@ -12,6 +12,7 @@ export default createGlobalStyle`
    body {
   background: #1B2432 url(${keysCrossed}) no-repeat -330px top ;
      -webkit-font-smoothing: antialiased;
+  
    }
   
    body, button {

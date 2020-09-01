@@ -40,6 +40,7 @@ export const CircleViolet = styled.span`
 export const Container = styled.div`
   table {
     width: 100%;
+    color: #fff;
     border-collapse: collapse;
   }
 
@@ -55,13 +56,16 @@ export const Container = styled.div`
 
   th {
     height: 50px;
+
   }
 
   td {
+    text-transform: capitalize;
     padding-left: 10px;
   }
 
   ul {
     list-style: none;
+    text-transform: capitalize;
   }
 `;

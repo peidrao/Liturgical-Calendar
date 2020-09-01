@@ -52,7 +52,9 @@ const Month: React.FC = () => {
             <tr>
               <th>Date</th>
               <th>Weekday</th>
-              <th>Title / Colour / Rank</th>
+              <th>Title </th>
+              <th>Rank</th>
+              <th>Colour</th>
             </tr>
           </thead>
           {months.map(month => (
@@ -65,11 +67,27 @@ const Month: React.FC = () => {
                     {month.celebrations.map(teste => (
                       <li key={month.date}>
                         {teste.title}
+                        {teste.rank}
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    {month.celebrations.map(teste => (
+                      <li key={month.date}>{teste.rank}</li>
+                    ))}
+                  </ul>
+                </td>
+
+                <td>
+                  <ul>
+                    {month.celebrations.map(teste => (
+                      <li key={month.date}>
                         {teste.colour === 'red' && <CircleRed />}
                         {teste.colour === 'green' && <CircleGreen />}
                         {teste.colour === 'white' && <CircleWhite />}
-                        {teste.colour === 'violet' && <CircleViolet/>}
-                        {teste.rank}
+                        {teste.colour === 'violet' && <CircleViolet />}
                       </li>
                     ))}
                   </ul>
