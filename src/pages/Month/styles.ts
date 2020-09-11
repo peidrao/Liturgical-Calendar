@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const Header = styled.div`
   display: flex;
   font-size: 20px;
-  margin-top: 10px;
+  margin-bottom: 20px;
   color: #f3f3f3;
+  font-weight: 900;
   justify-content: flex-end;
 
   svg {
@@ -48,6 +49,7 @@ export const Container = styled.div`
   table {
     width: 100%;
     color: #fff;
+    border: 1px solid #fff;
     border-collapse: collapse;
   }
 
@@ -58,7 +60,7 @@ export const Container = styled.div`
   table,
   th,
   td {
-    border: 1px solid #000;
+    border: 1px solid transparent;
   }
 
   th {
