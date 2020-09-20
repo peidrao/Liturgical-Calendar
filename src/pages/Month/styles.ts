@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Header = styled.div`
   display: flex;
@@ -11,38 +11,6 @@ export const Header = styled.div`
   svg {
     margin-right: 10px;
   }
-`;
-
-export const CircleRed = styled.span`
-  display: inline-block;
-  background: red;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-`;
-
-export const CircleGreen = styled.span`
-  display: inline-block;
-  background: green;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-`;
-
-export const CircleWhite = styled.span`
-  display: inline-block;
-  background: white;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-`;
-
-export const CircleViolet = styled.span`
-  display: inline-block;
-  background: #800080;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
 `;
 
 export const Container = styled.div`
@@ -76,4 +44,31 @@ export const Container = styled.div`
     list-style: none;
     text-transform: capitalize;
   }
+`;
+
+const CircleCSS = css`
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+`;
+
+export const CircleRed = styled.span`
+  background: red;
+  ${CircleCSS}
+`;
+
+export const CircleGreen = styled.span`
+  background: green;
+  ${CircleCSS}
+`;
+
+export const CircleWhite = styled.span`
+  background: white;
+  ${CircleCSS}
+`;
+
+export const CircleViolet = styled.span`
+  background: #800080;
+  ${CircleCSS}
 `;
