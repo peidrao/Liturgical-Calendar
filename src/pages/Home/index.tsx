@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { IoIosArrowForward, IoMdCalendar } from 'react-icons/io';
 
 import { Container, Title, Content, Header } from './styles';
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Header>
         <Title>
           <IoMdCalendar size={35} />
-          <p> Calendário Litúrgico </p>
+          <p> { t('liturgical-calendar') } </p>
         </Title>
 
-        <p>Ano 2020</p>
+        <p> { t('year') } 2020</p>
       </Header>
 
       <Container>
@@ -21,7 +24,7 @@ const Home: React.FC = () => {
           <p>1</p>
 
           <div>
-            <p>JAN</p>
+            <p>{ t('january') }</p>
           </div>
           <Link style={{ textDecoration: 'inherit' }} to="month/1">
             <IoIosArrowForward size={30} />
@@ -31,7 +34,7 @@ const Home: React.FC = () => {
         <Content>
           <p>2</p>
           <div>
-            <p>FEV</p>
+            <p>{ t('febuary') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/2">
             <IoIosArrowForward size={30} />
@@ -41,7 +44,7 @@ const Home: React.FC = () => {
         <Content>
           <p>3</p>
           <div>
-            <p>MAR</p>
+            <p>{ t('march') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/3">
             <IoIosArrowForward size={30} />
@@ -51,7 +54,7 @@ const Home: React.FC = () => {
         <Content>
           <p>4</p>
           <div>
-            <p>ABR</p>
+            <p>{ t('april') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/4">
             <IoIosArrowForward size={30} />
@@ -61,7 +64,7 @@ const Home: React.FC = () => {
         <Content>
           <p>5</p>
           <div>
-            <p>MAI</p>
+            <p>{ t('may') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/5">
             <IoIosArrowForward size={30} />
@@ -71,7 +74,7 @@ const Home: React.FC = () => {
         <Content>
           <p>6</p>
           <div>
-            <p>JUN</p>
+            <p>{ t('june') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/6">
             <IoIosArrowForward size={30} />
@@ -81,7 +84,7 @@ const Home: React.FC = () => {
         <Content>
           <p>7</p>
           <div>
-            <p>JUL</p>
+            <p>{ t('july') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/7">
             <IoIosArrowForward size={30} />
@@ -91,7 +94,7 @@ const Home: React.FC = () => {
         <Content>
           <p>8</p>
           <div>
-            <p>AGO</p>
+            <p>{ t('august') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/8">
             <IoIosArrowForward size={30} />
@@ -101,7 +104,7 @@ const Home: React.FC = () => {
         <Content>
           <p>9</p>
           <div>
-            <p>SET</p>
+            <p>{ t('september') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/9">
             <IoIosArrowForward size={30} />
@@ -111,7 +114,7 @@ const Home: React.FC = () => {
         <Content>
           <p>10</p>
           <div>
-            <p>OUT</p>
+            <p>{ t('october') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/10">
             <IoIosArrowForward size={30} />
@@ -121,7 +124,7 @@ const Home: React.FC = () => {
         <Content>
           <p>11</p>
           <div>
-            <p>NOV</p>
+            <p>{ t('november') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/11">
             <IoIosArrowForward size={30} />
@@ -131,7 +134,7 @@ const Home: React.FC = () => {
         <Content>
           <p>12</p>
           <div>
-            <p>DEZ</p>
+            <p>{ t('december') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/12">
             <IoIosArrowForward size={30} />
