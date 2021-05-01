@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           <p> Calendário Litúrgico </p>
         </Title>
 
-        <p>Ano 2020</p>
+        <p>Ano {new Date().getFullYear()}</p>
       </Header>
 
       <Container>
