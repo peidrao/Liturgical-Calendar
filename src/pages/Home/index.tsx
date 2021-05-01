@@ -13,10 +13,10 @@ const Home: React.FC = () => {
       <Header>
         <Title>
           <IoMdCalendar size={35} />
-          <p> { t('months.liturgical-calendar') } </p>
+          <p> { t('liturgical-calendar') } </p>
         </Title>
 
-        <p> { t('months.year') } 2020</p>
+        <p> { t('year') } 2020</p>
       </Header>
 
       <Container>
