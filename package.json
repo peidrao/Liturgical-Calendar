@@ -1,5 +1,5 @@
 {
-  "name": "explorercep",
+  "name": "liturgical-calendar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-i18next": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
     "eslint": "6.6.0",
