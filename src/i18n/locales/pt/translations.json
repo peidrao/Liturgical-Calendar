@@ -1,0 +1,24 @@
+{
+    "liturgical-calendar": "Calendário Liturgico",
+    "months": {
+        "january": "JAN",
+        "february": "FEV",
+        "march": "MAR",
+        "april": "ABR",
+        "may": "MAI",
+        "june": "JUN",
+        "july": "JUL",
+        "august": "AGO",
+        "september": "SET",
+        "october": "OUT",
+        "november": "NOV",
+        "december": "DEZ"
+    },
+    "year": "Ano",
+    "go-back": "Voltar",
+    "date": "Data",
+    "weekday": "Dia da Semana",
+    "title": "Título",
+    "rank": "Rank",
+    "Colour": "Cor"
+}

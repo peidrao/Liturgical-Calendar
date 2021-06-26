@@ -1,19 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { IoIosArrowForward, IoMdCalendar } from 'react-icons/io';
 
 import { Container, Title, Content, Header } from './styles';
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Header>
         <Title>
           <IoMdCalendar size={35} />
-          <p> Calendário Litúrgico </p>
+          <p> { t('liturgical-calendar') } </p>
         </Title>
 
         <p>Ano {new Date().getFullYear()}</p>
+
       </Header>
 
       <Container>
@@ -21,7 +25,7 @@ const Home: React.FC = () => {
           <p>1</p>
 
           <div>
-            <p>JAN</p>
+            <p>{ t('months.january') }</p>
           </div>
           <Link style={{ textDecoration: 'inherit' }} to="month/1">
             <IoIosArrowForward size={30} />
@@ -31,7 +35,7 @@ const Home: React.FC = () => {
         <Content>
           <p>2</p>
           <div>
-            <p>FEV</p>
+            <p>{ t('months.february') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/2">
             <IoIosArrowForward size={30} />
@@ -41,7 +45,7 @@ const Home: React.FC = () => {
         <Content>
           <p>3</p>
           <div>
-            <p>MAR</p>
+            <p>{ t('months.march') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/3">
             <IoIosArrowForward size={30} />
@@ -51,7 +55,7 @@ const Home: React.FC = () => {
         <Content>
           <p>4</p>
           <div>
-            <p>ABR</p>
+            <p>{ t('months.april') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/4">
             <IoIosArrowForward size={30} />
@@ -61,7 +65,7 @@ const Home: React.FC = () => {
         <Content>
           <p>5</p>
           <div>
-            <p>MAI</p>
+            <p>{ t('months.may') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/5">
             <IoIosArrowForward size={30} />
@@ -71,7 +75,7 @@ const Home: React.FC = () => {
         <Content>
           <p>6</p>
           <div>
-            <p>JUN</p>
+            <p>{ t('months.june') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/6">
             <IoIosArrowForward size={30} />
@@ -81,7 +85,7 @@ const Home: React.FC = () => {
         <Content>
           <p>7</p>
           <div>
-            <p>JUL</p>
+            <p>{ t('months.july') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/7">
             <IoIosArrowForward size={30} />
@@ -91,7 +95,7 @@ const Home: React.FC = () => {
         <Content>
           <p>8</p>
           <div>
-            <p>AGO</p>
+            <p>{ t('months.august') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/8">
             <IoIosArrowForward size={30} />
@@ -101,7 +105,7 @@ const Home: React.FC = () => {
         <Content>
           <p>9</p>
           <div>
-            <p>SET</p>
+            <p>{ t('months.september') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/9">
             <IoIosArrowForward size={30} />
@@ -111,7 +115,7 @@ const Home: React.FC = () => {
         <Content>
           <p>10</p>
           <div>
-            <p>OUT</p>
+            <p>{ t('months.october') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/10">
             <IoIosArrowForward size={30} />
@@ -121,7 +125,7 @@ const Home: React.FC = () => {
         <Content>
           <p>11</p>
           <div>
-            <p>NOV</p>
+            <p>{ t('months.november') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/11">
             <IoIosArrowForward size={30} />
@@ -131,7 +135,7 @@ const Home: React.FC = () => {
         <Content>
           <p>12</p>
           <div>
-            <p>DEZ</p>
+            <p>{ t('months.december') }</p>
           </div>
           <Link style={{ textDecoration: 'none' }} to="month/12">
             <IoIosArrowForward size={30} />

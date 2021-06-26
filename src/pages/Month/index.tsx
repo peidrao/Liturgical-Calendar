@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoMdReturnLeft } from 'react-icons/io';
+import { useTranslation } from 'react-i18next';
 import { useRouteMatch, Link } from 'react-router-dom';
 
 import api from '../../services/api';
@@ -30,6 +31,7 @@ interface DayParams {
 const Month: React.FC = () => {
   const [months, setMonth] = useState<DayDate[]>([]);
   const { params } = useRouteMatch<DayParams>();
+  const { t } = useTranslation();
 
   useEffect(() => {
     api.get(`/${params.month}`).then(response => {
@@ -43,18 +45,18 @@ const Month: React.FC = () => {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <IoMdReturnLeft size={20} />
         </Link>
-        Voltar
+        { t('go-back') }
       </Header>
 
       <Container>
         <table>
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Weekday</th>
-              <th>Title </th>
-              <th>Rank</th>
-              <th>Colour</th>
+              <th>{ t('date') }</th>
+              <th>{ t('weekday') }</th>
+              <th>{ t('title') }</th>
+              <th>{ t('rank') }</th>
+              <th>{ t('colour') }</th>
             </tr>
           </thead>
           {months.map(month => (
