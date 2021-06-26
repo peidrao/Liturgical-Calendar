@@ -16,7 +16,8 @@ const Home: React.FC = () => {
           <p> { t('liturgical-calendar') } </p>
         </Title>
 
-        <p> { t('year') } 2020</p>
+        <p>Ano {new Date().getFullYear()}</p>
+
       </Header>
 
       <Container>
