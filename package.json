@@ -1,5 +1,5 @@
 {
-  "name": "explorercep",
+  "name": "liturgical-calendar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +13,10 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.2",
     "axios": "^0.19.2",
+    "i18next": "^20.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.8.15",
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
@@ -43,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-i18next": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
     "eslint": "6.6.0",

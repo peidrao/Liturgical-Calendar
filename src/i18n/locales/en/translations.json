@@ -1,0 +1,24 @@
+{
+    "liturgical-calendar": "Liturgical Calendar",
+    "months": {
+        "january": "JAN",
+        "february": "FEB",
+        "march": "MAR",
+        "april": "APR",
+        "may": "MAY",
+        "june": "JUN",
+        "july": "JUL",
+        "august": "AUG",
+        "september": "SEPT",
+        "october": "OCT",
+        "november": "NOV",
+        "december": "DEC"
+    },
+    "year": "Year",
+    "go-back": "Go back",
+    "date": "Date",
+    "weekday": "Weekday",
+    "title": "Title",
+    "rank": "Rank",
+    "Colour": "Colour"
+}
