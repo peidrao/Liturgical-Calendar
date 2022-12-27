@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { IoIosArrowForward, IoMdCalendar } from "react-icons/io";
 import classnames from "./styles.module.css";
 
-import { Content } from "./styles";
 import months from "../../utils/months";
 
 function Home() {
@@ -22,7 +21,7 @@ function Home() {
 
       <div className={classnames.container}>
         {months.map((month) => (
-          <Content>
+          <div className={classnames.content}>
             <p>{month.NumberMonth}</p>
 
             <div>
@@ -31,7 +30,7 @@ function Home() {
             <Link to={month.NumberURL}>
               <IoIosArrowForward size={30} />
             </Link>
-          </Content>
+          </div>
         ))}
       </div>
     </>

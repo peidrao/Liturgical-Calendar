@@ -23,3 +23,24 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.content {
+  margin-top: 80px;
+  max-width: 500px;
+  align-content: flex-start;
+  background: #fff;
+  border-radius: 4px;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content div {
+  flex: 1;
+  padding-left: 1rem;
+}
