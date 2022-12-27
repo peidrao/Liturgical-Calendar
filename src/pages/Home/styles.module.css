@@ -18,3 +18,8 @@
 .headerLogo p {
   padding-left: 0.625rem;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { IoIosArrowForward, IoMdCalendar } from "react-icons/io";
 import classnames from "./styles.module.css";
 
-import { Container, Content } from "./styles";
+import { Content } from "./styles";
 import months from "../../utils/months";
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
         <p>Ano {new Date().getFullYear()}</p>
       </div>
 
-      <Container>
+      <div className={classnames.container}>
         {months.map((month) => (
           <Content>
             <p>{month.NumberMonth}</p>
@@ -33,7 +33,7 @@ function Home() {
             </Link>
           </Content>
         ))}
-      </Container>
+      </div>
     </>
   );
 }

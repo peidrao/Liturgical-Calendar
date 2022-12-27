@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  font-size: 32px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 12px;
-`;
-
 export const Content = styled.div`
   margin-top: 80px;
   max-width: 500px;
