@@ -1,4 +1,4 @@
-export default [
+const months = [
   {
     NumberMonth: 1,
     NumberURL: "month/1",
@@ -60,3 +60,5 @@ export default [
     MonthTranslation: "months.december",
   },
 ];
+
+export default months;
