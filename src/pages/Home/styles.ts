@@ -1,29 +1,5 @@
 import styled from "styled-components";
 
-export const Header = styled.div`
-  display: flex;
-  font-size: 32px;
-  color: #f3f3f3;
-  justify-content: space-between;
-  align-items: center;
-
-  p {
-    font-weight: 900;
-  }
-`;
-
-export const Title = styled.span`
-  display: flex;
-  align-items: center;
-  max-width: 400px;
-  line-height: 10px;
-
-  p {
-    padding-left: 10px;
-    font-weight: 300;
-  }
-`;
-
 export const Container = styled.div`
   font-size: 32px;
   display: grid;
