@@ -46,6 +46,14 @@ const columns: Column<Data>[] = [
     Header: "Season",
     accessor: "season",
   },
+  {
+    Header: "Title",
+    accessor: (row) => row.celebrations[0].title,
+  },
+  {
+    Header: "Color",
+    accessor: (row) => row.celebrations[0].colour,
+  },
 ];
 
 const Month = () => {
