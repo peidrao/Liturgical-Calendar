@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { IoMdReturnLeft } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 import { useParams, Link } from "react-router-dom";
+import classnames from "./styles.module.css";
 
 import api from "../../services/api";
 import {
@@ -12,6 +13,7 @@ import {
   CircleWhite,
   CircleViolet,
 } from "./styles";
+import { Column, usePagination, useTable } from "react-table";
 
 interface CelebrationsProps {
   title: string;
@@ -19,90 +21,173 @@ interface CelebrationsProps {
   colour: string;
 }
 
-interface DayDate {
+interface Data {
   date: string;
   weekday: string;
+  season: string;
   celebrations: CelebrationsProps[];
 }
-// interface DayParams {
-//   month: string;
+
+// interface Data {
+//   date: string;
+//   weekday: string;
 // }
 
-const Month: React.FC = () => {
-  const [months, setMonth] = useState<DayDate[]>([]);
-  const { month } = useParams();
+const columns: Column<Data>[] = [
+  {
+    Header: "Date",
+    accessor: "date",
+  },
+  {
+    Header: "WeekDay",
+    accessor: "weekday",
+  },
+  {
+    Header: "Season",
+    accessor: "season",
+  },
+  {
+    Header: "Title",
+    accessor: (row) => row.celebrations[0].title,
+  },
+  {
+    Header: "Color",
+    accessor: (row) => row.celebrations[0].colour,
+  },
+];
 
-  const { t } = useTranslation();
-
-  console.log(month);
+const Month = () => {
+  const [months, setMonth] = useState<Data[]>([]);
 
   useEffect(() => {
     api.get(`/${month}`).then((response) => {
       setMonth(response.data);
     });
-  }, [month]);
+  }, []);
+
+  const { month } = useParams();
+
+  console.log(months);
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    nextPage,
+    previousPage,
+    canNextPage,
+    canPreviousPage,
+    pageOptions,
+    gotoPage,
+    pageCount,
+    setPageSize,
+    state,
+    prepareRow,
+  } = useTable<Data>(
+    {
+      columns,
+      data: months,
+    },
+    usePagination
+  );
+
+  const { pageIndex, pageSize } = state;
+
+  // const { t } = useTranslation();
 
   return (
-    <>
-      <Header>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <IoMdReturnLeft size={20} />
-        </Link>
-        {t("go-back")}
-      </Header>
-
-      <Container>
-        <table>
-          <thead>
-            <tr>
-              <th>{t("date")}</th>
-              <th>{t("weekday")}</th>
-              <th>{t("title")}</th>
-              <th>{t("rank")}</th>
-              <th>{t("colour")}</th>
+    <div className={classnames.table}>
+      <table {...getTableProps()}>
+        <thead>
+          {headerGroups.map((headerGroup) => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
+                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+              ))}
             </tr>
-          </thead>
-          {months.map((month) => (
-            <tbody key={month.date}>
-              <tr>
-                <td>{month.date}</td>
-                <td>{month.weekday}</td>
-                <td>
-                  <ul>
-                    {month.celebrations.map((teste) => (
-                      <li key={month.date}>
-                        {teste.title}
-                        {teste.rank}
-                      </li>
-                    ))}
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    {month.celebrations.map((teste) => (
-                      <li key={month.date}>{teste.rank}</li>
-                    ))}
-                  </ul>
-                </td>
-
-                <td>
-                  <ul>
-                    {month.celebrations.map((teste) => (
-                      <li style={{ textAlign: "center" }} key={month.date}>
-                        {teste.colour === "red" && <CircleRed />}
-                        {teste.colour === "green" && <CircleGreen />}
-                        {teste.colour === "white" && <CircleWhite />}
-                        {teste.colour === "violet" && <CircleViolet />}
-                      </li>
-                    ))}
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
           ))}
-        </table>
-      </Container>
-    </>
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {page.map((row: any) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map((cell: any) => {
+                  return (
+                    <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+
+      <div
+        className="table-pagination"
+        style={{
+          margin: "5px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+          {"<<"}
+        </button>
+        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+          Previous
+        </button>
+        <span>
+          <strong
+            style={{ display: "block", width: "100px", textAlign: "center" }}
+          >
+            {pageIndex + 1} / {pageOptions.length}
+          </strong>
+        </span>
+        <span>
+          Go to page:{" "}
+          <input
+            type="number"
+            defaultValue={pageIndex + 1}
+            onChange={(e) => {
+              const pageNumber = e.target.value
+                ? Number(e.target.value) - 1
+                : 0;
+              gotoPage(pageNumber);
+            }}
+            style={{ width: "50px" }}
+          />
+        </span>
+        <button onClick={() => nextPage()} disabled={!canNextPage}>
+          Next
+        </button>
+        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+          {">>"}
+        </button>
+      </div>
+      <div
+        className="table-pagesize"
+        style={{
+          margin: "5px",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}
+      >
+        <select
+          value={pageSize}
+          onChange={(e) => setPageSize(Number(e.target.value))}
+        >
+          {[10, 25, 50].map((pageSize) => (
+            <option key={pageSize} value={pageSize}>
+              {pageSize}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
   );
 };
 

@@ -21,6 +21,6 @@ button {
 }
 
 body {
-  background: #1b2432 url("./images/imagem.svg") no-repeat -330px top;
+  /* background: #1b2432 url("./images/imagem.svg") no-repeat -330px top; */
   -webkit-font-smoothing: antialiased;
 }
