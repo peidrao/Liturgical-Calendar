@@ -24,3 +24,9 @@ body {
   /* background: #1b2432 url("./images/imagem.svg") no-repeat -330px top; */
   -webkit-font-smoothing: antialiased;
 }
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}

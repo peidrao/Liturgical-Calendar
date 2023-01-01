@@ -25,3 +25,17 @@ table th {
   background-color: #04aa6d;
   color: white;
 }
+
+.containerPagination {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationAction {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: translateX(10px);
+}
